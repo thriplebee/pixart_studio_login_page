@@ -1,0 +1,259 @@
+/* ---------For Sign In and Sugn Up Page----------- */
+/* ------------------------------------------------ */
+
+/* -----Card----- */
+.card{
+    width: 435px;
+    height: 440px;
+    margin: 0 auto;
+    background: #121212;
+    border: 9px solid #ff3e00;
+    border-radius: 30%;
+    overflow: hidden;
+}
+
+/* --Tabs-- */
+.card .tabs{
+    width: 100%;
+}
+
+.card .tabs .btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    /* overflow: hidden; */
+    padding: 25px 50px;
+}
+
+.card .tabs .btns > *{
+    flex: 1;
+    text-align: center;
+    line-height: 70px;
+}
+
+.card .tabs .btns a,
+.card .tabs .btns a label{
+    text-decoration: none;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+
+.card .tabs .btns .si a label{
+    color: #ff3e00;
+}
+
+/* Set Underline for Tabs */
+.card .tabs .btns .si .highlightersi,
+.card .tabs .btns .su .highlightersu{
+    position: relative;
+    color: #ff3e00;
+    font-weight: 700;
+    transition: all 0.4s ease-in;
+}
+
+.card .tabs .btns .si .highlightersi::before,
+.card .tabs .btns .su .highlightersu::before{
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background: #ff3e00;
+    border-radius: 99px 99px 0 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card .tabs .btns .su .highlightersu{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Hide Radio Buttons */
+#tog1,
+#tog2{
+    display: none;
+}
+
+/* Toggle Tab Underline */
+#tog2:checked ~ .tabs > .btns > .si > .highlightersi{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#tog2:checked ~ .tabs > .btns > .si > a > label{
+    color: #fff;
+}
+
+#tog2:checked ~ .tabs > .btns > .su > .highlightersu{
+    opacity: 1;
+    visibility: visible;
+}
+
+#tog2:checked ~ .tabs > .btns > .su > a > label{
+    color: #ff3e00;
+}
+
+/* Line Borer */
+.card .tabs .line{
+    width: 100%;
+    background: #707070;
+    height: 1px;
+}
+
+/* --Form Section-- (Common) */
+.card .frms form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    transition: all 0.3s ease-in;
+}
+
+/* Input Elements */
+.card .frms form .ui{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .frms form .ui input{
+    width: 280px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 5px 20px 5px 50px;
+    font-size: 1.1rem;
+    border: none;
+    background: #1c1c1c;
+    color: #fff;
+}
+
+.card .frms form img{
+    width: 20px;
+    position: absolute;
+    left: 50px;
+}
+
+/* Form Buttons */
+.card .frms form .fbtns{
+    text-decoration: none;
+    background: #ff3e00;
+    padding: 14px 52px;
+    border-radius: 12px;
+    color: #ece1de;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+
+.card .frms form .fbtns:hover{
+    background: #fa7a4f;
+    color: #1c1c1c;
+}
+
+/* Only Sign In Form */
+/* Remeber Me */
+.card .frms .sifrm .remember{
+    width: 80%;
+    position: relative;
+    left: 30px;
+    margin: 10px auto 10px 0;
+    cursor: pointer;
+}
+
+.card .frms .sifrm .remember input{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.card .frms .sifrm .remember span{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #979797;
+}
+
+.card .frms .sifrm .remember span::before{
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: #1c1c1c;
+    margin-right: 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in;
+}
+
+.card .frms .sifrm .remember:hover input ~ span:before{
+    background: #383838;
+}
+
+.card .frms .sifrm .remember input:checked ~ span:before{
+    background-image: url(../img/checked.png);
+    background-size: cover;
+}
+
+/* Forget Password */
+.card .frms .sifrm .forgot{
+    margin-top: 10px;
+}
+
+.card .frms .sifrm .forgot a{
+    text-decoration: none;
+    color: #979797;
+}
+
+/* Only Sign Up Form */
+.card .frms .sufrm{
+    bottom: 345px;
+    left: -100%;
+}
+
+/* Toggle Forms */
+#tog2:checked ~ .frms > .sifrm{
+    right: -100%;
+}
+
+#tog2:checked ~ .frms > .sufrm{
+    left: 0;
+}
+
+#tog1:checked ~ .frms > .sifrm{
+    right: 0;
+}
+
+/* ----Responsive---- */
+@media(max-width: 460px){
+    /* ----Card---- */
+    .card{
+        width: 310px;
+    }
+
+    /* --Form Section(Common)-- */
+    .card .frms form .ui{
+        padding: 0 20px;
+    }
+
+    .card .frms form img{
+        left: 0;
+    }
+
+    .card .frms form .ui input{
+        padding-left: 65px;
+    }
+}

@@ -1,0 +1,74 @@
+/* ---------For Profile Page----------- */
+/* ------------------------------------ */
+
+/* ----Bar---- */
+.bar{
+    width: 320px;
+    height: 20px;
+    background: #1c1c1c;
+    margin: 0 auto;
+}
+
+/* ----Details---- */
+.details{
+    width: 400px;
+    margin: 30px auto 0 auto;
+    font-size: 1rem;
+}
+
+.details .de{
+    width: 80%;
+    background: #1c1c1c;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* ----Buttons---- */
+.pbtns{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.pbtns .dash,
+.pbtns .lgo{
+    display: block;
+    background: #ff3e00;
+    padding: 10px 50px;
+    text-align: center;
+    margin: 8px 0;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in;
+}
+
+.pbtns a:hover{
+    background: #1c1c1c;
+}
+
+/* ----Responsive---- */
+@media(max-width: 400px){
+    /* ----Heading---- */
+    .head{
+        padding: 5px;
+    }
+
+    /* ----Bar---- */
+    .bar{
+        width: 270px;
+    }
+
+    /* ----Details---- */
+    .details{
+        width: 320px;
+    }
+
+    /* ----Buttons---- */
+    .pbtns{
+        width: 200px;
+    }
+}
